@@ -15,15 +15,26 @@ public class Main {
 		
 		CaveController controller = new CaveController();
 		
-		System.out.println("Input your request:");
-		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
-		Request request = new Request(reader.readLine());
+		while (true) {
+			
+			System.out.println("Input your request:");
 		
-		Response response = controller.doAction(request);
+			String userRequest = reader.readLine();
 		
-		ToConsole.responseToConsole(response);
+			if (userRequest.equalsIgnoreCase("STOP")) {
+			
+				System.out.println("See you next time!");
+				break;
+			}
+		
+			Request request = new Request(userRequest);
+		
+			Response response = controller.doAction(request);
+		
+			ToConsole.responseToConsole(response);
+		}
 		
 
 
