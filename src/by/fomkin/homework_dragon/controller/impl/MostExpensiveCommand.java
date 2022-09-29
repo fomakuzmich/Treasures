@@ -16,7 +16,7 @@ public class MostExpensiveCommand implements Command {
 	public Response execute(Request request) {
 		Response response = new Response();
 		
-		List<Treasure> treasures = caveLogic.getMostExpensive();
+		List<Treasure> treasures = caveLogic.mostExpensive();
 		response.setCommand(CommandName.MOST_EXPENSIVE.toString());
 		response.setTreasures(treasures);
 		return response;

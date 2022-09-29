@@ -54,7 +54,7 @@ public class Treasure implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Treasure [title=" + title + ", cost=" + cost + "]";
+		return getClass().getName() + " [title=" + title + ", cost=" + cost + "]";
 	}
 
 }

@@ -51,7 +51,7 @@ public class DragonCave implements Serializable{
 
 	@Override
 	public String toString() {
-		return "DragonCave [treasures=" + treasures + "]";
+		return getClass().getName() + " [treasures=" + treasures + "]";
 	}
 
 }
